@@ -1,0 +1,22 @@
+.label{
+    width: 120px;
+    padding-left: 0px;
+    font-size: 14px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.input
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 280px;
+    height: 28px;
+}
+.basic
+{
+    font: 1.3em sans-serif;
+    padding: 5px;
+}
+.textarea{
+    width: 400px;
+    height: 150px;
+}
