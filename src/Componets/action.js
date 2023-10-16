@@ -60,8 +60,7 @@ const selectSets=useState(['','',''])
         <div className="d-flex">
           <button className="btn btn-primary add" 
           // onClick={handleAddSet}
-          >
-            Add
+          > Add
           </button>
         </div>
       </div>
