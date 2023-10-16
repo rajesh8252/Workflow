@@ -12,14 +12,19 @@ const selectSets=useState(['','',''])
       <div className="container">
         
       <div className='row'>
-            <label>Select Module</label>
+            <label>Select Options</label>
       </div>
         <div className='row'>
       <select
                 className="form-control input"
                 name="option1"
+                style={{fontSize:"11px"}}
                 // onChange={(e) => handleSelect(setIndex, 'option1', e.target.value)}
                 >
+                  <option>Create Record</option>
+                  <option>Modify Record</option>
+                  <option>Delete the Record</option>
+                  <option>Sending Email</option>
       </select> 
       </div>
       </div>
@@ -81,5 +86,4 @@ const selectSets=useState(['','',''])
       </div>
   )
 }
-
 export default Action
