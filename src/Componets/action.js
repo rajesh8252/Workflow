@@ -10,6 +10,20 @@ const selectSets=useState(['','',''])
         <div className="col ml-5 basic">action</div>
       </div>
       <div className="container">
+        
+      <div className='row'>
+            <label>Select Module</label>
+      </div>
+        <div className='row'>
+      <select
+                className="form-control input"
+                name="option1"
+                // onChange={(e) => handleSelect(setIndex, 'option1', e.target.value)}
+                >
+      </select> 
+      </div>
+      </div>
+      <div className="container">
         {selectSets.map((set, setIndex) => (
           <div className="d-flex" key={setIndex} style={{ marginTop: "50px", marginBottom: "50px" }}>
             <div className="col">
