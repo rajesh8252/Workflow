@@ -1,14 +1,22 @@
 import React, { useState } from 'react'
-
-const Action = () => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+const Action = (props) => {
 const selectSets=useState(['','',''])
 
 
   return (
     <div className="container-fluid">
-      <div className="row align-items-start bg-success">
-        <div className="col ml-5 basic">action</div>
-      </div>
+   <div className="row align-items-start bg-success justify-content-end">
+  <div className="col ml-5 basic">
+    action
+  </div>
+  <div className="col down" onClick={props.isActionOpen}>
+    <FontAwesomeIcon icon={faChevronDown} />
+  </div>
+</div>
+    { props.action &&
+      <div className='container-fluid'>
       <div className="container">
         
       <div className='row'>
@@ -83,7 +91,8 @@ const selectSets=useState(['','',''])
           </button>
         </div>
       </div>
-      </div>
+
+ </div>} </div>
   )
 }
 export default Action

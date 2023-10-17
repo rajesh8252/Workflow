@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './condition.css';
 
-const Condition = () => {
+const Condition = (props) => {
   const [selectSets, setSelectSets] = useState([
     { option1: '', option2: '', option3: '', option4: '' },
   ]);
-
+  
   const handleAddSet = () => {
     setSelectSets([...selectSets, { option1: '', option2: '', option3: '', option4: '' }]);
     console.log(selectSets)
@@ -26,10 +28,21 @@ const Condition = () => {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row align-items-start bg-success">
-        <div className="col ml-5 basic">condition</div>
-      </div>
+    <div className="container-fluid mb-2">
+        <div 
+        className="row align-items-start bg-success justify-content-end">
+        <div 
+        className="col ml-5 basic">
+        condition
+        </div>
+        <div 
+        onClick={props.isConditionOpen}
+        className="col down">
+        <FontAwesomeIcon 
+        icon={faChevronDown} />
+        </div>
+  </div>
+  {props.condition &&
       <div className="container">
         {selectSets.map((set, setIndex) => (
           <div className="d-flex" key={setIndex} style={{ marginTop: "50px", marginBottom: "50px" }}>
@@ -94,6 +107,7 @@ const Condition = () => {
           </button>
         </div>
       </div>
+}
     </div>
   );
 };

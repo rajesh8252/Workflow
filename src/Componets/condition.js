@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './condition.css';
 
 const Condition = () => {
@@ -35,9 +37,14 @@ const Condition = () => {
 
   return (
     <div className="container-fluid">
-      <div className="row align-items-start bg-success">
-        <div className="col ml-5 basic">condition</div>
-      </div>
+      <div className="row align-items-start bg-success justify-content-end">
+  <div className="col ml-5 basic">
+    condition
+  </div>
+  <div className="col down">
+    <FontAwesomeIcon icon={faChevronDown} />
+  </div>
+</div>
       <div className="container">
         {selectSets.map((setIndex) => (
           <div className="d-flex" key={setIndex} style={{ marginTop: "50px", marginBottom: "50px" }}>
